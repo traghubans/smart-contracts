@@ -1,0 +1,28 @@
+// A simple smart Contract using the Remix Compiler
+// Stores value on the blockchain to grab it
+
+// SPDX-License-Identifier: GPL-3.0
+// Define Solidity Version or Version + higher
+pragma solidity ^0.8.7;
+
+
+// Contract Declaration
+contract StorageExample
+{
+    // Declared Variables
+    uint storeData;
+    
+    // Function to set value on the blockchain
+    // We keep these public to keep them viewable -> if were to interact with other smart contracts we need it viewable
+    function set (uint x) public 
+    {
+        storeData = x;
+    }
+
+    // Function to get value on the blockchain
+    function get () public view returns (uint) 
+    {
+        return storeData;
+    }
+    
+}
